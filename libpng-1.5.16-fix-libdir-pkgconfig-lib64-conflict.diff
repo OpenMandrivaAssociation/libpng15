@@ -1,0 +1,47 @@
+--- libpng-1.5.16/libpng-config.in.lib64~	2013-05-23 13:45:22.000000000 +0200
++++ libpng-1.5.16/libpng-config.in	2013-06-05 17:01:28.305659315 +0200
+@@ -14,12 +14,12 @@
+ version="@PNGLIB_VERSION@"
+ prefix="@prefix@"
+ exec_prefix="@exec_prefix@"
+-libdir="@libdir@"
++libdir=""
+ includedir="@includedir@/libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@"
+ libs="-lpng@PNGLIB_MAJOR@@PNGLIB_MINOR@"
+ all_libs="-lpng@PNGLIB_MAJOR@@PNGLIB_MINOR@ @LIBS@"
+ I_opts="-I${includedir}"
+-L_opts="-L${libdir}"
++L_opts=""
+ R_opts=""
+ cppflags=""
+ ccopts=""
+--- libpng-1.5.16/libpng.pc.in.lib64~	2013-05-23 13:45:22.000000000 +0200
++++ libpng-1.5.16/libpng.pc.in	2013-06-05 17:01:28.305659315 +0200
+@@ -1,11 +1,11 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+-libdir=@libdir@
++libdir=
+ includedir=@includedir@/libpng@PNGLIB_MAJOR@@PNGLIB_MINOR@
+ 
+ Name: libpng
+ Description: Loads and saves PNG files
+ Version: @PNGLIB_VERSION@
+-Libs: -L${libdir} -lpng@PNGLIB_MAJOR@@PNGLIB_MINOR@
++Libs: -lpng@PNGLIB_MAJOR@@PNGLIB_MINOR@
+ Libs.private: @LIBS@
+ Cflags: -I${includedir}
+--- libpng-1.5.16/scripts/libpng.pc.in.lib64~	2013-06-05 17:01:28.305659315 +0200
++++ libpng-1.5.16/scripts/libpng.pc.in	2013-06-05 17:01:57.499295214 +0200
+@@ -1,10 +1,9 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+-libdir=@libdir@
+ includedir=@includedir@/libpng15
+ 
+ Name: libpng
+ Description: Loads and saves PNG files
+ Version: 1.5.16
+-Libs: -L${libdir} -lpng15
++Libs: -lpng15
+ Cflags: -I${includedir}
