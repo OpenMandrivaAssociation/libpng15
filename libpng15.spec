@@ -1,8 +1,8 @@
-%define api	15
-%define major	15
-%define libname	%mklibname png %{api} %{major}
+%define api 15
+%define major 15
+%define libname %mklibname png %{api} %{major}
 %define devname %mklibname png%{api} -d
-%define	static	%mklibname -d -s png%{api}
+%define static %mklibname -d -s png%{api}
 
 %bcond_with	uclibc
 %bcond_with	devpackages
@@ -69,8 +69,8 @@ Requires:	%{libname} >= %{EVRD}
 %if %{with uclibc}
 Requires:	uclibc-%{libname} >= %{EVRD}
 %endif
-Provides:	%{name}-devel = %{EVRD}
-Provides:	png-devel = %{EVRD}
+Provides:	%{name}%{api}-devel = %{EVRD}
+Provides:	png%{api}-devel = %{EVRD}
 
 %description -n	%{devname}
 The libpng-devel package contains the header files and libraries
@@ -81,7 +81,7 @@ Graphics) library.
 Summary:	Static development library of %{name}
 Group:		Development/C
 Requires:	%{devname} = %{EVRD}
-Provides:	png-static-devel
+Provides:	png%{api}-static-devel
 
 %description -n	%{static}
 This package contains a static library for development using %{name}.
