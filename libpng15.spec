@@ -10,7 +10,7 @@
 Summary:	A library of functions for manipulating PNG image format files
 Name:		libpng%{api}
 Version:	1.5.16
-Release:	14
+Release:	15
 License:	zlib
 Group:		System/Libraries
 Url:		http://www.libpng.org/pub/png/libpng.html
