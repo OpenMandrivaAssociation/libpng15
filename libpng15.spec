@@ -95,7 +95,7 @@ This package contains the source code of %{name}.
 
 %prep
 %setup -q -n libpng-%version
-%apply_patches
+%autopatch -p1
 
 %build
 %if %{with uclibc}
